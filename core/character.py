@@ -18,20 +18,32 @@ class Character:
         self.xp = character_xp
         self.inventory = []
 
-    def description(self):
-        print("%s: health:%s, mana:%s, power:%s, xp:%s, inventory:%s") %(self.name, self.health, self.mana, self.power, self.xp, self.inventory)
+    def attack(self, enemy):
+        self.xp += 10
+        enemy.health = 0
 
-    def move(self, x, y):
-        print("%s move") %(self.name)
+    def pick(self, inventory[item]):
+            self.inventory = inventory[item]
 
-    def attack(self, opponent):
-        print("%s attack %s") %(self.name, opponent.name)
 
-    def throw(self, object):
-        print("%s throw %s") %(self.name, object.name)
 
-    def use(self, object):
-        print("%s use %s") %(self.name, object.name)
+
+    # def description(self):
+    #     print("%s: health:%s, mana:%s, power:%s, xp:%s, inventory:%s") %(self.name, self.health, self.mana, self.power, self.xp, self.inventory)
+    #
+    # def move(self, x, y):
+    #     print("%s move") %(self.name)
+    #
+    # def attack(self, opponent):
+    #     print("%s attack %s") %(self.name, opponent.name)
+    #
+    # def throw(self, object):
+    #     print("%s throw %s") %(self.name, object.name)
+    #
+    # def use(self, object):
+    #     print("%s use %s") %(self.name, object.name)
+
+
 
 
 class Wizard(Character):
